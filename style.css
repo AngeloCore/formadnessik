@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: #000112;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 30px;
+    color: #fff;
+    margin: 12px 28px;
+    font-weight: 900;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    margin-right: 40px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 7px 10px;
+    margin: 16px 15px;
+    text-decoration: none;
+    color: #efefef;
+    transition: 200ms linear;
+}
+
+.nav>.nav-links>a:hover {
+    background-color: #fff;
+    color: #111;
+    border-radius: 9px;
+}
+
+.nav>#nav-check {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+    .nav>.nav-btn>label:hover, .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow: hidden;
+        z-index: 100;
+    }
+    .nav>.nav-header>.nav-title {
+        margin: 2px 20px;
+    }
+}
+
+main {
+    margin-top: 150px;
+}
+
+.hi {
+    text-align: center;
+    padding: 0 60px;
+}
+
+.title {
+    color: #fff;
+}
+
+.description {
+    color: #c7c7c7;
+    border: 1px solid blue;
+    border-radius: 9px;
+    padding: 15px;
+}

@@ -1,0 +1,1 @@
+My friend `Madnessik#0007` asked me, so i created this for 5m
